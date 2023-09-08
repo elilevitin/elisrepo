@@ -1,1 +1,2 @@
 kubectl run nginx-pod-eli --image nginx:alpine
+kubectl run messaging --image redis:alpine --labels "tier=msg"
