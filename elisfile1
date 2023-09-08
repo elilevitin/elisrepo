@@ -1,2 +1,6 @@
+1 --------------------
 kubectl run nginx-pod-eli --image nginx:alpine
+2 --------------------
 kubectl run messaging --image redis:alpine --labels "tier=msg"
+4 ----------------------
+kubectl get nodes -o json >/tmp/nodes-eli
