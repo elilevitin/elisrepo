@@ -1,1 +1,1 @@
-test
+kubectl run nginx-pod-eli --image nginx:alpine
