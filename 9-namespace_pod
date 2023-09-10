@@ -1,0 +1,24 @@
+# create namespace yaml eli
+apiVersion: v1
+kind: Namespace
+metadata:
+    name: finance-eli
+    labels:
+      name: finance-eli
+-------------------------------
+ kubectl apply -f names.yaml
+--------------------------
+      # make current namespace 
+kubectl config set-context --current --namespace=finance-eli
+--------------------------
+# create pod in current namespace
+apiVersion: v1
+kind: Pod
+metadata:
+   name: temp-bus
+spec:
+   containers:
+           - name: temp-bus
+             image: redis-alpine
+-----------------------
+kubectl apply -f pod.yaml
